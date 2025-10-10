@@ -6,7 +6,17 @@ Istruzioni:
 1) Imposta INTERFACCIA e NUOVO_MAC nelle costanti qui sotto.
 2) Esegui con: sudo python3 mac_change.py 
 """
-
+"""
+ESEMPIO DI OUTPUT
+└─$ sudo python3 mac_change.py 
+[sudo] password for kali: 
+[i] MAC attuale di eth0: 00:11:22:33:44:55
+[+] Spengo la scheda di rete eth0…
+[+] Imposto il nuovo MAC 00:11:22:33:44:58 su eth0…
+[+] Riattivo la scheda di rete eth0…
+[i] MAC riportato dal sistema: 00:11:22:33:44:58
+[✓] Indirizzo MAC cambiato con successo.
+"""
 import re
 import subprocess
 import sys
