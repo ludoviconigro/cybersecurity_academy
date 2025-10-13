@@ -1,5 +1,19 @@
+#  LAB-01
 
-**DISCLAIMER — Uso responsabile:** il materiale in questo repository è fornito **solo** a scopi didattici e di ricerca in ambienti virtuali o di laboratorio isolati. Esegui test **solo** su sistemi di cui sei proprietario o per i quali hai autorizzazione esplicita. L'autore non si assume responsabilità per eventuali usi impropri o danni derivanti dall'uso dei materiali qui presenti.
+Questa cartella raccoglie quattro script/esempi relativi a operazioni di rete usate a scopo **didattico** e di laboratorio. Ogni file mostra un differente aspetto delle interazioni IP/Ethernet e fornisce esempi per analisi, test e studio delle contromisure:
+
+- **Cambio indirizzo MAC** (`mac_change.py`) — modifica l'indirizzo MAC di un'interfaccia di rete su Linux per scopi di test o anonimato in ambienti controllati.  
+- **ICMP Echo Request con Scapy** (`icmp_request.py`, `icmp2_request.py`) — invio e analisi di pacchetti ICMP (ping) costruiti manualmente; la versione estesa spiega i campi IP/ICMP e include hexdump a fini didattici.  
+- **ARP Sweep** (`network_arp_scan.py`) — esegue una scansione ARP su una rete CIDR per identificare host attivi (stampa IP → MAC).  
+- **ARP Spoofing (sezione informativa)** (`arp_spoofing.py`) — descrizione concettuale dell’ARP spoofing, rischi e contromisure. *Questa sezione è puramente informativa e non include istruzioni operative.*
+
+> ## ⚠️ DISCLAIMER — USO RESPONSABILE
+>
+> **Questo repository è a scopo didattico.** Esegui test **solo** in ambienti virtuali/isolati (VM, VLAN di laboratorio)
+> e su sistemi di cui sei proprietario o per cui disponi di **autorizzazione esplicita**.  
+> **L'autore non si assume responsabilità** per eventuali usi impropri.
+
+---
 
 ## Indice
 - [🧩 Script: Cambia Indirizzo MAC](#mac-change)
