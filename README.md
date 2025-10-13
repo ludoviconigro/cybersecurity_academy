@@ -3,8 +3,15 @@
 Questa repository raccoglie **materiale di studio personale** e codice prodotto durante il percorso formativo della **Cybersecurity Academy**.  
 Contiene esercitazioni, script e laboratori svolti durante le lezioni e i moduli pratici, con l’obiettivo di **comprendere e sperimentare in modo sicuro** i principali concetti di **sicurezza informatica**, **analisi di rete** e **cyber defense**.
 
-> ⚙️ Le esercitazioni vengono eseguite esclusivamente su macchine virtuali dedicate:  
-> **Ethical Hacker Kali Linux Virtual Machine** e **LabVM Workstation**.
+
+> ⚙️ Tutte le esercitazioni vengono eseguite su **macchine virtuali dedicate**, in esecuzione su **VMware Workstation**:
+>
+> - 🧩 **Ethical Hacker Kali Linux Virtual Machine**  (tipicamente usata come macchina-attaccante)
+>   👉 [Download Kali Linux VMware Image](https://www.kali.org/get-kali/#kali-virtual-machines)
+>
+> - 🧱 **LabVM Workstation** (ambiente di laboratorio preconfigurato fornito nel corso)  (tipicamente usata come macchina-vittima)
+>   👉 [Download VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) *(necessario per l’esecuzione)*
+
 
 ---
 
