@@ -1,6 +1,17 @@
 #  LAB-01
 
-Questa cartella raccoglie quattro script/esempi relativi a operazioni di rete usate a scopo **didattico** e di laboratorio. Ogni file mostra un differente aspetto delle interazioni IP/Ethernet e fornisce esempi per analisi, test e studio delle contromisure:
+Questa cartella raccoglie quattro script/esempi relativi a operazioni di rete usate a scopo **didattico** e di laboratorio. 
+
+> ⚙️ Tutte le esercitazioni vengono eseguite su **macchine virtuali dedicate**, in esecuzione su **VMware Workstation**:
+>
+> - 🧩 **Ethical Hacker Kali Linux Virtual Machine**  (tipicamente usata come macchina-attaccante)
+>   👉 [Download Kali Linux VMware Image](https://www.kali.org/get-kali/#kali-virtual-machines)
+>
+> - 🧱 **LabVM Workstation** (ambiente di laboratorio preconfigurato fornito nel corso)  (tipicamente usata come macchina-vittima)
+>   👉 [Download VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) *(necessario per l’esecuzione)*
+
+
+Ogni file mostra un differente aspetto delle interazioni IP/Ethernet e fornisce esempi per analisi, test e studio delle contromisure:
 
 - **Cambio indirizzo MAC** (`mac_change.py`) — modifica l'indirizzo MAC di un'interfaccia di rete su Linux per scopi di test o anonimato in ambienti controllati.  
 - **ICMP Echo Request con Scapy** (`icmp_request.py`, `icmp2_request.py`) — invio e analisi di pacchetti ICMP (ping) costruiti manualmente; la versione estesa spiega i campi IP/ICMP e include hexdump a fini didattici.  
