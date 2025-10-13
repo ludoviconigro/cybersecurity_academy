@@ -1,4 +1,15 @@
-## 🧩 Script: Cambia Indirizzo MAC (`mac_change.py`)
+
+**DISCLAIMER — Uso responsabile:** il materiale in questo repository è fornito **solo** a scopi didattici e di ricerca in ambienti virtuali o di laboratorio isolati. Esegui test **solo** su sistemi di cui sei proprietario o per i quali hai autorizzazione esplicita. L'autore non si assume responsabilità per eventuali usi impropri o danni derivanti dall'uso dei materiali qui presenti.
+
+## Indice
+- [🧩 Script: Cambia Indirizzo MAC](#mac-change)
+- [🛰️ Script: icmp_request & icmp2_request con Scapy](#icmp-scripts)
+- [🔎 Script: ARP Sweep con Scapy](#arp-sweep)
+- [⚠️ Script: arp_spoofing.py](#arp-spoofing)
+
+<a id="mac-change"></a>
+# 🧩  1.  mac_change.py
+## Cambiare indirizzo MAC
 
 ### 📖 Descrizione
 Questo script consente di **modificare l’indirizzo MAC** di una specifica interfaccia di rete su sistemi **Linux**, utilizzando il comando `ip` del pacchetto **iproute2**.  
@@ -31,8 +42,11 @@ sudo python3 mac_change.py
 [i] MAC riportato dal sistema: 00:11:22:33:44:58
 [✓] Indirizzo MAC cambiato con successo.
 ```
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🛰️ Script: icmp_request & icmp2_request con Scapy
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a id="icmp-scripts"></a>
+# 🛰️  2.  icmp_request & icmp2_request
+## ICMP Echo Request con Scapy
+
 Questi due script inviano un **ICMP Echo Request (ping)** costruito manualmente con **Scapy**, specificando indirizzo IP sorgente, destinazione e interfaccia di uscita. Entrambi richiedono privilegi di root perché inviano pacchetti raw e possono usare IP "spoofed".  
 
 - **File principali**
@@ -102,8 +116,11 @@ IP / ICMP / ...
 ```
 
 ---
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🔎 Script: ARP Sweep con Scapy (`network_arp_scan.py`)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a id="arp-sweep"></a>
+# 🔎  3.  network_arp_scan.py
+## Stampa IP e MAC degli host che rispondono all'ARP
+
 
 ### 📖 Descrizione
 Questo script esegue un **ARP sweep** su una rete (CIDR) usando **Scapy**: invia richieste ARP in broadcast e raccoglie le risposte per scoprire host attivi. Per ogni host che risponde stampa l'indirizzo IP e l'indirizzo MAC corrispondente.  
@@ -150,4 +167,36 @@ Host attivi trovati (IP -> MAC):
 (altre righe...)
 ```
 ---
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a id="arp-spoofing"></a>
+# ⚠️  4.  arp_spoofing.py
+## Invia risposte ARP falsificate (ARP *is-at*) all'interno di un dominio di broadcast locale con l'obiettivo, in ambiente di laboratorio, di dimostrare come la tabella ARP di un host possa essere manipolata.
+
+### 📖 Descrizione
+Breve panoramica a livello concettuale: lo script documentato invia risposte ARP falsificate (ARP *is-at*) all'interno di un dominio di broadcast locale con l'obiettivo, in ambiente di laboratorio, di dimostrare come la tabella ARP di un host possa essere manipolata. Scopo didattico: comprendere effetti di un potenziale Man-in-the-Middle e studiare contromisure.
+
+---
+
+### ⚙️ Funzionamento (breve)
+- A livello concettuale, lo strumento costruisce risposte ARP falsificate in cui un IP legittimo viene associato a un MAC non corretto; queste risposte vengono inviate ai dispositivi nel dominio di broadcast.  
+- Se un host aggiorna la propria tabella ARP con le informazioni ricevute, il traffico verso l'IP “avvelenato” può essere deviato o intercettato in topologie che lo permettono.  
+- Utilità didattica: osservare come cambiano le tabelle ARP, capire limiti e condizioni (dominio di broadcast, filtri ARP, protezioni L2) e valutare contromisure.
+
+---
+### ▶️ Esecuzione
+
+  Avvia lo script
+  ```bash
+      sudo python3 arp_spoofing.py
+  ```
+> potrebbe uscire o meno un output in base alla configurazione della macchina
+  in questo momento l'internet della vittima è disabilitato, per abilitarlo dopo aver lancato lo scritp  APRI UN ALTRO TERMINALE e lancia
+  ```bash
+      sudo iptables -P FORWARD ACCEPT
+      sudo sysctl -w net.ipv4.ip_forward=1 
+  ```
+  se vuoi disattivare l'internet alla vittima lancia
+  ```bash
+      sudo sysctl -w net.ipv4.ip_forward=0
+  ```
+
