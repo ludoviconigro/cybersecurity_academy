@@ -7,7 +7,7 @@ Questa cartella raccoglie quattro script/esempi relativi a operazioni di rete us
 > - 🧩 **Ethical Hacker Kali Linux Virtual Machine**  (tipicamente usata come macchina-attaccante)
 >   👉 [Download Kali Linux VMware Image](https://www.kali.org/get-kali/#kali-virtual-machines)
 >
-> - 🧱 **LabVM Workstation** (ambiente di laboratorio preconfigurato fornito nel corso)  (tipicamente usata come macchina-vittima)
+> - 🧱 **LabVM Workstation** (tipicamente usata come macchina-vittima)
 >   👉 [Download VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) *(necessario per l’esecuzione)*
 
 
