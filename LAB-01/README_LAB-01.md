@@ -234,12 +234,6 @@ Breve panoramica a livello concettuale: lo script documentato invia risposte ARP
 `leaving_quietly.py` è uno script di **remediation** pensato per ambienti di laboratorio. Dopo esperimenti che alterano le tabelle ARP (es. esercitazioni didattiche su ARP spoofing condotte in rete isolata), lo script invia messaggi ARP correttivi per **ripristinare** le associazioni IP↔MAC sui dispositivi interessati, riducendo l’impatto residuo delle attività di test.  
 Potrebbe essere implementata nell'attacco arp-spoofing quando si conclude l'attacco
 
-### 🔧 Requisiti
-- Eseguire **solo** in un ambiente di laboratorio isolato (VM, VLAN di test).  
-- Privilegi amministrativi sulla macchina che invia i pacchetti (necessari in laboratorio per invio L2).  
-- Conoscenza preventiva degli indirizzi IP e MAC utilizzati nella topologia di test (router, vittima, ecc.).  
-- Strumenti di monitoraggio per verificare il ripristino (es. visualizzazione tabelle ARP o capture in sola lettura).
-
 ### ⚙️ Funzionamento (concettuale)
 - Lo script costruisce e invia pacchetti ARP di tipo *reply* che riportano le associazioni corrette (IP → MAC) ai nodi coinvolti nella simulazione.  
 - Tipicamente invia:
@@ -251,5 +245,3 @@ Potrebbe essere implementata nell'attacco arp-spoofing quando si conclude l'atta
   ```bash
       sudo python3 leaving_quietly.py 
   ```
-
-.
