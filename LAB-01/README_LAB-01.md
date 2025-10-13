@@ -31,6 +31,7 @@ Ogni file mostra un differente aspetto delle interazioni IP/Ethernet e fornisce 
 - [🛰️ Script: icmp_request & icmp2_request con Scapy](#icmp-scripts)
 - [🔎 Script: ARP Sweep con Scapy](#arp-sweep)
 - [⚠️ Script: arp_spoofing.py](#arp-spoofing)
+- [🔁 Script: leaving-quielty.py](#leaving-quielty)
 
 <a id="mac-change"></a>
 # 🧩  1.  mac_change.py
@@ -224,4 +225,31 @@ Breve panoramica a livello concettuale: lo script documentato invia risposte ARP
   ```bash
       sudo sysctl -w net.ipv4.ip_forward=0
   ```
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a id="leaving-quielty"></a>
+# 🔁  5.  leaving-quielty.py
+## Ripristino ARP table
 
+### 📖 Descrizione
+`leaving_quietly.py` è uno script di **remediation** pensato per ambienti di laboratorio. Dopo esperimenti che alterano le tabelle ARP (es. esercitazioni didattiche su ARP spoofing condotte in rete isolata), lo script invia messaggi ARP correttivi per **ripristinare** le associazioni IP↔MAC sui dispositivi interessati, riducendo l’impatto residuo delle attività di test.  
+Potrebbe essere implementata nell'attacco arp-spoofing quando si conclude l'attacco
+
+### 🔧 Requisiti
+- Eseguire **solo** in un ambiente di laboratorio isolato (VM, VLAN di test).  
+- Privilegi amministrativi sulla macchina che invia i pacchetti (necessari in laboratorio per invio L2).  
+- Conoscenza preventiva degli indirizzi IP e MAC utilizzati nella topologia di test (router, vittima, ecc.).  
+- Strumenti di monitoraggio per verificare il ripristino (es. visualizzazione tabelle ARP o capture in sola lettura).
+
+### ⚙️ Funzionamento (concettuale)
+- Lo script costruisce e invia pacchetti ARP di tipo *reply* che riportano le associazioni corrette (IP → MAC) ai nodi coinvolti nella simulazione.  
+- Tipicamente invia:
+  - una risposta al router per ripristinare la voce che associa l’IP della vittima al suo MAC reale;  
+  - una risposta alla vittima per ripristinare la voce che associa l’IP del router al MAC reale del router.  
+- L’obiettivo è ripristinare lo stato “pulito” della rete di laboratorio dopo le esercitazioni.
+
+### ▶️ Esecuzione (CONCETTUALE & SICURA)
+  ```bash
+      sudo python3 leaving_quietly.py 
+  ```
+
+.
