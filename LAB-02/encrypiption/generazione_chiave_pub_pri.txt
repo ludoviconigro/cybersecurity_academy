@@ -1,0 +1,19 @@
+GENERARE CHIAVE PUB + PRI
+openssl genrsa -out pub_priv_pair.key 1024
+
+SALVARE SOLO CHIAVE PUBBLICA
+openssl rsa -in pub_priv_pair.key -pubout -out public_out.key
+writing RSA key
+
+SALVARE SOLO CHIAVE PRIVATA
+openssl pkey -in pub_priv_pair.key -out private_out.key
+openssl rsa -in pub_priv_pair.key -pubout -out public_key.pem
+
+
+CIFRATURA
+openssl pkeyutl -encrypt -pubin -inkey public_out.key -in plain.txt -out cipher.bin -pkeyopt rsa_padding_mode:oaep
+openssl base64 -in cipher.bin -out cipher64.txt
+penssl base64 -d -in cipher64.txt -out cipher64.bin
+
+DECIFRATURA
+openssl pkeyutl -decrypt -inkey pub_priv_pair.key -in cipher64.bin -out plainD.txt -pkeyopt rsa_padding_mode:oaep
