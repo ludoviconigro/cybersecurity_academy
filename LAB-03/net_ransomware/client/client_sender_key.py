@@ -1,3 +1,5 @@
+##PRIMA DI AVVIARE LEGGERE IL FILE TXT PRESENTE NELLA CARTELLA "CLIENT"
+
 import socket       # Used for TCP/IP communication
 import sys          # Used to access command-line arguments and exit gracefully
 
