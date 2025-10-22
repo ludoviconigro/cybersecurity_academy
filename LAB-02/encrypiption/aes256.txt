@@ -1,0 +1,5 @@
+CIFRARE
+openssl enc -aes-256-ctr -pbkdf2 -e -a -in secret.txt -out encrypted.txt
+
+DECIFRARE
+openssl enc -aes-256-ctr -pbkdf2 -d -a -in encrypted.txt -out decrypted.txt
