@@ -1,3 +1,6 @@
+##PRIMA DI AVVIARE LEGGERE IL FILE TXT PRESENTE NELLA CARTELLA "CLIENT"
+##PRIMA DI AVVIARE GENERARE IL FILE "pub_priv_pair.key" E INSERIRLO NELLA CARTELLA CLIENT
+
 import socketserver     # Provides a framework for writing network servers
 import subprocess       # Allows execution of external system commands (e.g., OpenSSL)
 import os               # Provides functions to interact with the file system
