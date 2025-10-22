@@ -1,0 +1,19 @@
+SERVER
+┌──(kali㉿Kali)-[~/scriptHacker/Lab-03/net_rensomware/server]
+└─$ sudo python3 server_sender_key.py
+Server listening on port 8082
+Encrypted data received
+Binary file converted to base64
+Base64-decoded file written as binary
+Decryption successful
+Decrypted file sent to client
+
+CLIENT
+cisco@labvm:~/scriptHacker/net_rensomware/client$ sudo python3 client_sender_key.py 
+Enter the server IP address: <IP MACCHINA KALI>
+Enter the server port number: 8082
+Connected to server <IP MACCHINA KALI>:8082
+File 'cipher.bin' sent to the server
+Decrypted file received from the server.
+File 'plainD.txt' saved locally.
+
