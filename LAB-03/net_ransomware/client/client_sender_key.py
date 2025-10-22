@@ -1,4 +1,5 @@
 ##PRIMA DI AVVIARE LEGGERE IL FILE TXT PRESENTE NELLA CARTELLA "CLIENT"
+##PRIMA DI AVVIARE GENERARE IL FILE "cipher.bin" E INSERIRLO NELLA CARTELLA CLIENT
 
 import socket       # Used for TCP/IP communication
 import sys          # Used to access command-line arguments and exit gracefully
