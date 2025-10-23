@@ -4,4 +4,4 @@ openssl req -new -newkey rsa:3072 -days 365 -nodes -x509 \ -keyout server.key -o
 openssl req -new -newkey rsa:3072 -days 365 -nodes -x509 -keyout client.key -out client.crt
 
 sudo python3 secure_server.py
-sudo python3 secure_client.py
+sudo python3 secure_socket.py
