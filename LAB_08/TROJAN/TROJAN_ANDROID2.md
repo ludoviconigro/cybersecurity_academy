@@ -52,13 +52,12 @@ Dopo aver installato autonomamente le estenzioni ti aprirà la schermata
 [*] Generating apk payload                                                                     
 [ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   ]                               
 ```
----
 
 Successivamente  ti chiederà l'ip, la porta, il nome dell'app(puoi laciare tutto di default)
 alla modalità selezione l'ultimo (android/meterpreter_reverse_https)
 dopo aver generato il file ti verrà chiesto Multi-Handler 
 Si aprirà automaticamente un Terminale che darà queste scritte
-
+```bash
 =[ metasploit v6.4.84-dev                          ]
 + -- --=[ 2,547 exploits - 1,309 auxiliary - 1,680 payloads ]
 + -- --=[ 431 post - 49 encoders - 13 nops - 9 evasion     ]
