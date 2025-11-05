@@ -3,17 +3,27 @@
 Questa repository raccoglie **materiale di studio personale** e codice prodotto durante il percorso formativo della **Cybersecurity Academy**.  
 Contiene esercitazioni, script e laboratori svolti durante le lezioni e i moduli pratici, con l’obiettivo di **comprendere e sperimentare in modo sicuro** i principali concetti di **sicurezza informatica**, **analisi di rete** e **cyber defense**.
 
+---
+### 💻 Macchine virtuali utilizzate in VMware
 
-> ⚙️ Tutte le esercitazioni vengono eseguite su **macchine virtuali dedicate**, in esecuzione su **VMware Workstation**:
->
-> - 🧩 **Ethical Hacker Kali Linux Virtual Machine**  (tipicamente usata come macchina-attaccante)
->   👉 [Download Kali Linux VMware Image](https://www.kali.org/get-kali/#kali-virtual-machines)
->
-> - 🧱 **LabVM Workstation** (ambiente di laboratorio preconfigurato fornito nel corso)  (tipicamente usata come macchina-vittima)
->   👉 [Download VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) *(necessario per l’esecuzione)*
+Durante le attività di laboratorio in ambiente controllato, ho utilizzato le seguenti macchine virtuali tramite **VMware Workstation**:
 
+* **Metasploitable2-Linux**
+* **FreeBSD version 10 and earlier 64-bit**
+* **Cybersecurity_Lab_VM_Workstation_20250409**
+* **Ubuntu_24.04_VM_LinuxVMImages.COM**
+* **Tenable-Core-OL8-Nessus-20250923**
+* **kali-linux-2025.3-vmware-amd64**
+* **Windows 7 x64**
+
+In aggiunta, ho impiegato un **emulatore Android** con:
+
+* **Dispositivo virtuale:** Pixel 2
+* **API Level:** 33 (“Tiramisu”)
+* **Versione Android:** 13.0
 
 ---
+
 
 ## 📂 Cartelle dei Laboratori
 
