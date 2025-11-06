@@ -58,3 +58,18 @@ sudo dmesg
 
 [ 3178.690726] Bye bye!
 ```
+Cerca in tutto il filesystem tutte le copie/installazioni di quell'header (utile per sviluppo kernel o per vedere le syscall definite nel sistema).
+```bash
+ubuntu@ubuntu2404:~/cybersecurity_academy/LAB_09/rootkit/kernel$ sudo find / -iname unistd_64.h
+find: ‘/run/user/1000/gvfs’: Permission denied
+find: ‘/run/user/1000/doc’: Permission denied
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h
+/usr/src/linux-headers-6.14.0-33-generic/arch/x86/include/generated/uapi/asm/unistd_64.h
+/usr/src/linux-headers-6.14.0-34-generic/arch/x86/include/generated/uapi/asm/unistd_64.h
+```
+Vede quali numeri di syscall usa il kernel per le chiamate (utile quando scrivi un rootkit LKM, syscall hook o lavori con assembly/syscalls).
+```bash
+ubuntu@ubuntu2404:~/cybersecurity_academy/LAB_09/rootkit/kernel$ cat /usr/include/x86_64-linux-gnu/asm/unistd_64.h
+```
+
+
