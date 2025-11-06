@@ -1,0 +1,17 @@
+PROMPT_INGEGNERIZZATO = f"""
+ROLE: Sei un analista finanziario senior.
+TASK: Analizza i dati di vendita del trimestre Q3.
+CONTEXT: Dati allegati in CSV.
+CONSTRAINT: Sii conciso, non superare le 200 parole.
+FORMAT: Restituisci l'output in un elenco puntato Markdown.
+"""
+
+
+
+
+
+ROLE: Sei un analista finanziario senior.
+TASK: Analizza i dati di vendita del trimestre Q3.
+CONTEXT: Dati allegati in CSV.
+CONSTRAINT: Sii conciso, non superare le 200 parole.
+FORMAT: Restituisci l'output in un elenco puntato Markdown.
