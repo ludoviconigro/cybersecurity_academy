@@ -1,4 +1,10 @@
-dal terminale lancia i comandi 
+>Per questo attacco è stato utilizzato 
+>> - un Android Studio con un emulatore di un Pixel 2 con API 33 ""Tiramisù" e con Android 13.0
+>>> - per vedere un pieno potenziale di questo attacco si può usare una versione di Android più vecchia come Android 7 
+>> - La macchina Kali deve essere impostata in Bridge
+>>> -(RICORDATI CHE IMPOSTANDO LA MACCHINA IN BRIDGE devi controllare il nuovo indirizzo IP perchè è diverso da quello in NAT
+
+Dal terminale lancia i comandi 
 ```bash
 git clone https://github.com/M4sc3r4n0/Evil-Droid
 cd Evil-Droid
