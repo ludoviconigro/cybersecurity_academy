@@ -1,5 +1,5 @@
-Macchina Attaccante -> Kali Linux
-Macchina Vittima -> Ubuntu
+Macchina Attaccante -> Kali Linux  
+Macchina Vittima -> Ubuntu/ altro browser su Kali / cellulare / ... / qualsiasi dispositivo nella sottorete  
 1 - Su Kali lancia questi comandi per scaricare BeEF (Browser Exploitation Framework)
 ```bash
 sudo apt update
