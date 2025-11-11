@@ -60,7 +60,7 @@ Ogni modulo di comando ha un'icona a forma di semaforo, che viene utilizzata per
 ⚪ Il modulo di comando deve ancora essere verificato con questo target
 🔴 Il modulo di comando non funziona con questo target
 
-Alcuni attacchi possibili:
+Alcuni attacchi possibili:  
 **-Redirect Browser**  
 Nella Scheda Commands accedi alla cartella Browser/Hooked Domain e seleziona la voce "Redirect Browser" ad esempio (Standard).
 Inserisci il link che si vuole reindirizzare la rete della vittima e seleziona Execute
