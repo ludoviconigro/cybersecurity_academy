@@ -54,11 +54,11 @@ Si aprirà un sito di carne
 3 - Dalla schermata del browser di kali clicca nella colonna di sinistra l'indirizzo ip 
 Si aprirà una schermata contenente i dettagli della sessione interessata dalla vittima
 Vai nella voce "Commands" dove sono presenti tutti gli attacchi possibili
-Ogni modulo di comando ha un'icona a forma di semaforo, che viene utilizzata per indicare quanto segue:
-🟢 Il modulo di comando funziona con il target e dovrebbe essere invisibile all'utente
-🟠 Il modulo di comando funziona con il target, ma potrebbe essere visibile all'utente
-⚪ Il modulo di comando deve ancora essere verificato con questo target
-🔴 Il modulo di comando non funziona con questo target
+Ogni modulo di comando ha un'icona a forma di semaforo, che viene utilizzata per indicare quanto segue:  
+🟢 Il modulo di comando funziona con il target e dovrebbe essere invisibile all'utente  
+🟠 Il modulo di comando funziona con il target, ma potrebbe essere visibile all'utente  
+⚪ Il modulo di comando deve ancora essere verificato con questo target  
+🔴 Il modulo di comando non funziona con questo target  
 
 Alcuni attacchi possibili:  
 **-Redirect Browser**  
