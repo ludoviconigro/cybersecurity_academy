@@ -34,18 +34,19 @@ Avvia l'app (se non hai modificato le credenziali di default ti chiederà di cam
              └─5119 node /tmp/execjs20251111-5066-dz5nc5js
 
 ```
-Ti aprirà una schermata di browser al link "http://127.0.0.1:3000/ui/authentication"
-effettua il login con le credenziali 
+Ti aprirà una schermata di login di browser al link "http://127.0.0.1:3000/ui/authentication"
+Effettua il login con le credenziali 
 2 - dal browser della vittima
 Se usi lo stesso computer apri un altro Browser ad esempio Cromium già installato
 ```bash
 http://127.0.0.1:3000/demos/butcher/index.html
 ```
-o se stai usando due macchine duverse 
+o se stai usando due macchine virtuali diverse 
 ```bash
 http://<IP MACCHINA KALI>:3000/demos/butcher/index.html
 ```
-o se vuoi attaccare un cellulare o un qualsiasi dispositivo nella tua sottorete imposta la macchina Kali in Bridge 
+o se vuoi attaccare un cellulare (ad esempio un iphone) o un qualsiasi dispositivo nella tua sottorete  
+imposta la macchina Kali in Bridge (potresti dove accedere dal cellulare usando il browser Firefox)
 ```bash
 http://<IP MACCHINA KALI BRIDGE>:3000/demos/butcher/index.html
 ```
