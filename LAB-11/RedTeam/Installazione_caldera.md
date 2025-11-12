@@ -24,8 +24,10 @@ Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi
 
    e sostituiscila con:
 
-   ```
+   ```bash
    lxml>=5.2,<6
+   # oppure, se serve una versione specifica:
+   # lxml==5.2.1 (o > 5.2 se disponibile)
    ```
 
 ---
@@ -96,16 +98,6 @@ sudo apt install -y nodejs npm
 source venv/bin/activate
 python3 server.py --insecure --build
 ```
-
----
-
-## ✅ Note finali
-
-* Se Caldera si avvia correttamente, puoi successivamente lanciarlo **senza `--build`**:
-
-  ```bash
-  python3 server.py --insecure
-  ```
 * L’interfaccia web è accessibile da browser su `http://localhost:8888`
 > Credenziali default (modalità insecure):
 >> Username: red  
