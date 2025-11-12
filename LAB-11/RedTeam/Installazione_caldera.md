@@ -1,21 +1,21 @@
-````markdown
-# Installazione Caldera (versione manuale da sorgente)
 
+# Installazione Caldera (versione manuale da sorgente)
+````markdown
 ## ⚠️ Avvertenze importanti
-1. **Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
+**Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
    ```bash
    sudo apt purge caldera -y
    sudo apt autoremove --purge -y
    sudo rm -rf /usr/share/caldera /var/lib/caldera /etc/caldera
 ````
 
-2. **Clonare Caldera dal repository ufficiale MITRE**:
+1. **Clonare Caldera dal repository ufficiale MITRE**:
 
    ```bash
    git clone https://github.com/mitre/caldera.git
    ```
 
-3. **Modifica file `requirements.txt`** prima di installare le dipendenze:
+2. **Modifica file `requirements.txt`** prima di installare le dipendenze:
    cerca la riga
 
    ```
