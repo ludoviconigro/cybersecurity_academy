@@ -108,5 +108,5 @@ python3 server.py --insecure --build
   ```
 * L’interfaccia web è accessibile da browser su `http://localhost:8888`
 > Credenziali default (modalità insecure):
->> Username: red
+>> Username: red  
 >> Password: admin
