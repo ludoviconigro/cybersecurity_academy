@@ -2,7 +2,7 @@
 # Installazione Caldera (versione manuale da sorgente)
 ````markdown
 ## ⚠️ Avvertenze importanti
-**Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
+** Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
    ```bash
    sudo apt purge caldera -y
    sudo apt autoremove --purge -y
