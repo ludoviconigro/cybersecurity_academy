@@ -32,4 +32,10 @@ Dalla macchina vittima
 - Incolla il codice precedentemente salvato e invia
 - Anche se da errore ti chiederà il di accettare dei permessi
 
-Dalla macchina Kali dovresi a questo punto essere agganciato alla macchina della vittima
+Dalla macchina Kali dovresi a questo punto essere agganciato alla macchina della vittima  
+- ora vai su Operation nella colonna Campaigns e selezione "+ New Operation"  
+- Dai un nome alla operazione, seleziona "Discovery" alla voce Adversary e "Alice Filtrers" alla voce Fact Source.  
+
+Ora dovrebbero uscirti tutte le vulnerabilità della macchina precedentemente attaccata  
+da qui puoi lanciare i comandi.
+
