@@ -1,7 +1,8 @@
 Aavvia Caldera e apri il browser e vai al sito  `http://localhost:8888` ed effettua il login
 > il file per l'installazione e l'avvio di Caldera è presente nella cartella sotto il nome di Installazione_caldera.md  
 
-Vai nella colonna di sinistra e accedi alla voce "agents".  
+Vai nella colonna di sinistra e accedi alla voce "agents".   
+# Sandcat
 Seleziona la voce "+ Deploy an agent" e seleziona l'agent "Sandcat".   
 Scegli il sistema operativo della vittima. 
 >(per l'attacco abbiamo usato il sistema windows come vittima)   
