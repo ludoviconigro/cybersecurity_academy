@@ -72,7 +72,7 @@ python3 server.py --insecure --build
 
 ---
 
-## 🔧 In caso di errore sui plugin/UI (passaggi aggiuntivi)
+## 🔧 In caso l'ultimo comando dia errore
 
 ### 1. Assicurati di essere nella directory caldera (già ci sei)
 
