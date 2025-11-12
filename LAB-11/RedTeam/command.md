@@ -14,5 +14,8 @@ Esegui il comando
 cd T1518    
 cat T1518.md
 ```
-Avvia Caldera e apri il browser accedendo al sito di cardera
+Da un altro terminale, avvia Caldera e apri il browser e vai al sito  `http://localhost:8888`
+> Credenziali default (modalità insecure):
+>> Username: red  
+>> Password: admin
 > il file per l'installazione e l'avvio di Caldera è presente nella cartella sotto il nome di Installazione_caldera.md
