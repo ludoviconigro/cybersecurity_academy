@@ -1,13 +1,13 @@
 
 # Installazione Caldera (versione manuale da sorgente)
-````markdown
+
 ## ⚠️ Avvertenze importanti
-** Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
+Disinstallare eventuali versioni precedenti di Caldera** prima di seguire questi passaggi per evitare conflitti:  
    ```bash
    sudo apt purge caldera -y
    sudo apt autoremove --purge -y
    sudo rm -rf /usr/share/caldera /var/lib/caldera /etc/caldera
-````
+```
 
 1. **Clonare Caldera dal repository ufficiale MITRE**:
 
