@@ -127,5 +127,7 @@ wine shellter.exe
                                                                                                                                                                                                    
 Choose Operation Mode - Auto/Manual (A/M/H):
 ```
-
-
+o se sei da un nuovo terminale 
+```
+wine /opt/shellter/shellter/shellter.exe
+```
