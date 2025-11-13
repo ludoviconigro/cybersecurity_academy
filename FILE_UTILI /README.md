@@ -1,0 +1,1 @@
+**In questa directory sono salvati alcuni file contenenti informazioni utili al corso, come ad esempio liste di comandi, appunti tecnici e materiali di supporto alle esercitazioni. Questi documenti servono come riferimento rapido durante le attività pratiche.**
