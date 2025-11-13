@@ -17,21 +17,17 @@ cat T1518.md
 ---
 ---
 ---
-## Conclusione
+## 📘 Conclusione
 
-L’attacco **Golden Ticket** rappresenta una delle tecniche più potenti e persistenti nel contesto della compromissione di Active Directory. Una volta ottenuto l’hash dell’account **KRBTGT**, un attaccante può generare ticket Kerberos falsi che gli consentono di autenticarsi come qualsiasi utente del dominio, inclusi gli amministratori di dominio, senza necessità di ulteriori credenziali.
+All’interno della cartella `atomics` è possibile trovare una vasta raccolta di test di simulazione basati sul framework **MITRE ATT&CK**.
+Ogni test (chiamato *atomic test*) rappresenta una singola tecnica di attacco, descritta in modo dettagliato e accompagnata dai comandi necessari per riprodurla **in ambiente sicuro e controllato**.
 
-Questo tipo di attacco dimostra l’importanza della **protezione dell’autorità di autenticazione (Domain Controller)** e della corretta gestione delle chiavi Kerberos. In un ambiente di sicurezza controllato, viene utilizzato per comprendere le modalità di abuso del protocollo Kerberos e per addestrare i team di difesa a **rilevare e mitigare** tali comportamenti.
+Questa repository, sviluppata da **Red Canary**, è uno strumento fondamentale per **valutare la capacità di rilevamento e risposta di un sistema di sicurezza**.
+Permette infatti di:
 
-### Possibili contromisure
+* comprendere meglio le tattiche e tecniche usate dagli attaccanti reali;
+* testare e migliorare i sistemi di **monitoraggio, logging e difesa**;
+* addestrare il personale di sicurezza in scenari realistici ma sicuri.
 
-* **Monitorare l’attività di autenticazione Kerberos**, in particolare ticket con durate anomale o provenienti da host insoliti.
-* **Ruotare periodicamente la password dell’account KRBTGT** (almeno due volte per annullare i ticket falsi esistenti).
-* **Limitare i privilegi amministrativi** e segmentare la rete per ridurre l’impatto di una compromissione.
-* **Implementare controlli di rilevamento avanzati (SIEM, EDR)** per individuare anomalie legate alla generazione o all’uso di ticket sospetti.
+> ⚠️ Tutti i test devono essere eseguiti **esclusivamente in un ambiente di laboratorio isolato**, poiché simulano comportamenti malevoli che, in un contesto produttivo, potrebbero compromettere la sicurezza del sistema.
 
-In sintesi, la comprensione del Golden Ticket è fondamentale per chi studia la sicurezza informatica: consente di approfondire i meccanismi di autenticazione di Windows e sviluppare strategie difensive più efficaci contro attacchi avanzati.
-
----
-
-Vuoi che te lo formatto subito in un file `T1518.md` pronto da salvare nella cartella `atomics/T1518`?
