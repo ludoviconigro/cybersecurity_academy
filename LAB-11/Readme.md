@@ -1,0 +1,1 @@
+In questa directory sono archiviati i principali tool utilizzati per eseguire gli attacchi all’interno dell’ambiente di laboratorio. Qui sono raccolti gli strumenti necessari per le varie fasi di analisi, exploit e post-exploitation.
