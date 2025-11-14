@@ -43,3 +43,4 @@ Ora, se tutto è andato bene,
 Da Kali vai alla voce AGENTS e se l'attacco è andato bene dovrebbe esserci la voce con le informazioni del Computer della Vittima.  
 Se cliccate sopra sarà possibile interagire con il terminale della macchina o Visionare i file di sistema del computer.  
 Se andate nella Sezione FILE BROWSER è possibile cliccando col tasto destro nella cartella desiderata effettuare un upload di file.
+(Da windows potrebbe fuzniona (male) solo il terminale )
