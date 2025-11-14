@@ -1,3 +1,27 @@
+![Status](https://img.shields.io/badge/Project-Educational-blue)
+![VMware](https://img.shields.io/badge/Environment-VMware-orange)
+![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
+
+---
+
+## 📑 Indice
+- [Cybersecurity Academy — Repository di Studio Personale](#-cybersecurity-academy--repository-di-studio-personale)
+- [Macchine virtuali utilizzate in VMware](#-macchine-virtuali-utilizzate-in-vmware)
+- [Cartelle dei Laboratori](#-cartelle-dei-laboratori)
+  - [LAB-01](#lab-01)
+  - [LAB-02](#lab-02)
+  - [LAB-03](#lab-03)
+  - [LAB-07](#lab-07)
+  - [LAB-08](#lab-08)
+  - [LAB-09](#lab-09)
+  - [LAB-10](#lab-10)
+  - [LAB-11](#lab-11)
+- [Disclaimer — Uso responsabile e limitazione di responsabilità](#️-disclaimer--uso-responsabile-e-limitazione-di-responsabilità)
+- [Note finali](#-note-finali)
+
+---
+
+
 # 🧠 Cybersecurity Academy — Repository di Studio Personale
 
 Questa repository raccoglie **materiale di studio personale** e codice prodotto durante il percorso formativo della **Cybersecurity Academy**.  
@@ -149,6 +173,13 @@ Ambiente Windows simulato tramite Wine:
 Raccolta di comandi generali Red Team:
 * Insieme di istruzioni utili per operazioni comuni di attacco e post-exploitation
 * Riferimenti rapidi a comandi cross-tool (Caldera, Covenant, Wine, Meterpreter)
+### **Starkiller**
+Interfaccia grafica per Powershell Empire:
+* Permette la gestione visuale del framework Empire (listener, agenti, moduli)
+* File **Installazione** per configurare Starkiller ed effettuare la connessione al server Empire
+* File **Attacco** con esempi di utilizzo degli agenti, esecuzione moduli, raccolta informazioni e movimento laterale
+* Supporto completo per workflow Red Team tramite GUI semplificata rispetto alla CLI di Empire
+---
 ---
 <div align="center" style="border:4px solid #c0392b; padding:18px; border-radius:10px; background:#fff5f5;">
 
