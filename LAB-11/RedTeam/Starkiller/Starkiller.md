@@ -16,15 +16,16 @@ Vai alla voce Linsterers e poi "CREATE"
 Vai alla voce STAGERS e poi "CREATE"  
 - ti verrà chiesto il Type e metti
    -  se si vuole attaccare una macchina Linux = Linux_bash 
-   -  se si vuole attaccare una macchina Windows = Linux_bash
+   -  se si vuole attaccare una macchina Windows = windows_cmd_exec
 - mette come listener http   
 - controlla che le informazioni inserite di default siano giuste e poi schiaccia "SUBMIT"
-- scarica lo Stagers creato e dagli i permessi amministratore 
+- scarica lo Stagers creato
+  - se l'attacco è per linux dai i permessi amministratore al file 
 ```bash
-sudo chmod +x NOMEFILE.sh o NOMEFILE.exe 
+sudo chmod +x ./launcher.sh 
 ls -l             
 total 4
--rwxrwxr-x 1 kali kali 1536 Nov 14 15:04 NOMEFILE.sh o NOMEFILE.exe
+-rwxrwxr-x 1 kali kali 1536 Nov 14 15:04 ./launcher.sh
 ```
 Trasferisci il file alla Macchina Vittima  
 Apti un terminale nella direcroty dove hai salvato il file e lancia il comando  
@@ -32,10 +33,9 @@ Se su Ubunutu
 ```bash
 sudo sh ./launcher.sh
 ```
-Se su Windows
-```bash
-sudo sh ./launcher.sh
-```
+Se su Windows  
+- avvia il file exe
+  
 Ora, se tutto è andato bene, 
 - su Ubuntu dovrebbe scomparire dalla cartella il file launcher.sh.
 - da Windows    
