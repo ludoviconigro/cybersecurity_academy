@@ -1,3 +1,6 @@
+![Status](https://img.shields.io/badge/Project-Educational-blue)
+![VMware](https://img.shields.io/badge/Environment-VMware-orange)
+![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
 # 🧠 Cybersecurity Academy — Repository di Studio Personale
 
 Questa repository raccoglie **materiale di studio personale** e codice prodotto durante il percorso formativo della **Cybersecurity Academy**.  
@@ -5,7 +8,7 @@ Contiene esercitazioni, script e laboratori svolti durante le lezioni e i moduli
 
 ---
 ## 📑 Indice
-- [Macchine virtuali utilizzate in VMware](#-macchine-virtuali-utilizzate-in-vmware)
+- [Macchine virtuali utilizzate](#-macchine-virtuali-utilizzate)
 - [Cartelle dei Laboratori](#-cartelle-dei-laboratori)
   - [LAB-01](#lab-01)
   - [LAB-02](#lab-02)
@@ -19,7 +22,7 @@ Contiene esercitazioni, script e laboratori svolti durante le lezioni e i moduli
 - [Note finali](#-note-finali)
 
 ---
-### 💻 Macchine virtuali utilizzate in VMware
+### 💻 Macchine virtuali utilizzate
 
 Durante le attività di laboratorio in ambiente controllato, ho utilizzato le seguenti macchine virtuali tramite **VMware Workstation**:
 
